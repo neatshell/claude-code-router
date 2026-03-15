@@ -310,7 +310,7 @@ async function sendRequestToProvider(
 
   // Handle authentication in passthrough mode
   if (bypass && typeof transformer.auth === "function") {
-    const auth = await transformer.auth(requestBody, provider);
+    const auth = await transformer.auth(requestBody, provider, { headers: config.headers });
     if (auth.body) {
       requestBody = auth.body;
       let headers = config.headers || {};
