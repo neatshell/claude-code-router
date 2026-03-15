@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "node ../../scripts/build-cli.js",
-    "dev": "ts-node src/cli.ts"
+    "dev": "ts-node --transpile-only src/cli.ts"
   },
   "keywords": [
     "claude",
